@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/templates/static/css/lhome.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header class="bg">
+      <h1>ABC Tailors</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li>Profile</li>
+          <li>
+            <a href="home.html"><button>Log out</button></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content">
+        <div id="myorder" class="orders">
+          <h1>My Orders</h1>
+          <p>
+            <em>You can see your order details and history of your orders</em>
+          </p>
+        </div>
+        <div id="bookord" class="orders">
+          <h1>Book Orders</h1>
+          <p>
+            <em
+              >You can book your orders here in your preferences and get
+              satisfied with our work</em
+            >
+          </p>
+        </div>
+      </div>
+      <div class="master" style="display: none">
+        <div>
+          <button class="trashButn">X</button>
+        </div>
+        <div class="ord-head">Your Orders</div>
+        <div class="text">
+          <table>
+            <tr>
+              <th>Material</th>
+              <th>Model Image</th>
+              <th>Color</th>
+              <th>Size</th>
+              <th>Requested Time</th>
+              <th>Delivery Time</th>
+              <th>E-Pay</th>
+              <th>Feedback</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="book" style="display: none">
+        <div>
+          <button class="cancel-btn">x</button>
+        </div>
+        <div class="book-head"><p>Book your Order</p></div>
+        <div class="form-layout">
+          <form action="/book" method="post">
+            <label>Material</label><br />
+            <input type="text" id="material" name="material" /><br />
+            <label>Model Image</label><br />
+            <input type="file" id="mimg" name="mimg" multiple /><br />
+            <label>Color</label><br />
+            <input type="color" id="color" name="color" /><br />
+            <label>Size</label><br />
+            <select name="size" id="size">
+              <option value="xs">XS</option>
+              <option value="s">small</option>
+              <option value="m">medium</option>
+              <option value="l">large</option>
+              <option value="xl">XL</option>
+              <option value="xxl">XXL</option>
+              <option value="xxxl">XXXL</option></select
+            ><br />
+            <label>Expected Date</label><br />
+            <input type="date" id="date" name="date"/>
+            <div class="book-btns">
+              <button id="booking-btn" class="book-btn" type="submit">BOOK</button>
+              <button
+                id="clear-btn"
+                class="book-btn"
+                type="reset"
+              >
+                CLEAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      const myorder = document.getElementById("myorder");
+      const content = document.querySelector(".content");
+      const master = document.querySelector(".master");
+
+      myorder.addEventListener("click", function () {
+        master.style.display = "flex";
+        content.style.display = "none";
+      });
+
+      document
+        .querySelector(".trashButn")
+        .addEventListener("click", function () {
+          master.style.display = "none";
+          content.style.display = "flex";
+        });
+
+      const bookord = document.getElementById("bookord");
+      const book = document.querySelector(".book");
+      bookord.addEventListener("click", function () {
+        book.style.display = "flex";
+        content.style.display = "none";
+      });
+
+      document
+        .querySelector(".cancel-btn")
+        .addEventListener("click", function () {
+          book.style.display = "none";
+          content.style.display = "flex";
+        });
+    </script>
+  </body>
+</html>

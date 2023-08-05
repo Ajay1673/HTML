@@ -1,0 +1,22 @@
+body{
+    font-size: 1.5rem;
+}
+.column{
+    column-count: 4;
+    column-width: 200px;
+    column-rule: 2px solid brown;
+    column-gap: 5rem;
+}
+.column p{
+    padding-top: 0; 
+    /* margin: 0; */
+}
+.column h2{
+    margin-top: 0;
+    /* padding-top: 0; */
+    background-color: black;
+    color: aqua;
+    text-align: center;
+    break-inside: avoid;
+    break-before: column;
+}

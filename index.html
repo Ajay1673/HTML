@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ's Page</title>
+    <link rel="icon" href="images/Aj.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+    <!-- html texts -->
+    <header>
+        <h1>HTML Bootcamp</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#html">learn html texts</a>
+                </li>
+                <li><a href="#lists">learn html lists</a></li>
+                <li><a href="#form">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+    <main>
+
+    <section id="html">
+            <h2>Hi Guys</h2>
+            <h2>I'm AJ</h2>
+            <p>Welcome to my page</p>
+            <hr>
+            <h2>This is my first page</h2>
+    <p>I'm learning <strong><abbr title="Hypertext Markup Language">HTML</abbr></strong></p>
+    <p>This page contains <em>bootcamp</em> experiment <br>Let's start from the scratch</p>
+    <p>I went for a ride to these places last month</p>
+    <address>
+        ECR, Vembar Beach,Vembar, Ramanathapuram District,
+        Tamilnadu,India - 628906.
+    </address><br>
+    <!-- <h2><u>Images of vembar Beach</u></h2> -->
+    <img src="images/vembar.jpg" alt="Vembar sea" title="This is the vembar sea" width="300" height="230">
+    <img src="images/lighthouse.jpg" alt="Vembar lighthouse" title="This is the vembar lighthouse" width="300" height="230">
+    <!-- <figure> -->
+        <img src="images/beach.jpg" alt="Vembar Beach" title="This is the vembar beach" width="300" height="230" loading="lazy">
+    <!-- </figure> -->
+    <img src="images/sunrise.jpg" alt="Vembar sunrise" title="sunrise at vembar" width="300" height="230">
+    <img src="images/sunset.jpg" alt="Vembar sunset" title="sunset at vembar" width="290" height="230">
+    <figure><figcaption>Images of scenarios in Vembar</figcaption></figure>
+    
+    <br>
+    </section>
+<hr>
+<section id="lists">
+    <h3><mark>I want to learn these things</mark></h3>
+    <!-- lists -->
+    <ol>
+        <li><em><abbr title="Hypertext Markup Language"><a href="https://www.w3schools.com/html/">HTML</a></abbr></em></li>
+        <li><em><abbr title="Cascading Stylesheet"><a href="https://www.w3schools.com/css/">CSS</a></abbr></em></li>
+        <li><em><abbr title="Javascript"><a href="https://www.w3schools.com/js/">JS</a></abbr></em></li>
+    </ol>
+    <ul>
+        <li><strong>The time period to learn these may take 2weeks</strong></li>
+        <li><strong>It should be done how quick I will </strong></li>
+    </ul>
+    <hr>
+    
+    <!-- description list -->
+    <dl>
+        <!-- description term -->
+        <dt>HTML</dt>
+        <!-- description detail -->
+        <dd>It is the basic one to learn the <strong>web design</strong> and it acts as structure of a website</dd>
+        
+        <dt>CSS</dt>
+        <dd>It is the <strong>stylesheet</strong> used to add styles, colors and make a good look for the HTML page</dd>
+        
+        <dt>JS</dt>
+        <dd>It is used for make the page <strong>responsive</strong></dd>
+    </dl>
+</section>
+<article>
+    <h3>
+        My Daily work
+    </h3>
+    <ol>
+        <li>Wake</li>
+        <li>Bath</li>
+        <li>Eat</li>
+        <li>play</li>
+        <li>study</li>
+        <li>sleep</li>
+    </ol>
+    <aside>
+        <details>
+            <summary>
+                Guess the number of hours I spend for each activity
+            </summary>
+            <p>It ranges from <time datetime="PT2H">2 hours</time></p>
+            <p>I sleep for more hours</p>
+        </details>
+    </aside>
+    <br>
+    <table>
+        <caption>My schedules</caption>
+        <thead>
+        <tr>
+            <th></th>
+            <th>Time</th>
+            <th>Activity</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Morning</th>
+            <td>
+                <time datetime="08:00">8am</time>-<time datetime="10:00">10am</time>
+            </td>
+            <td>Wake,Bath,Eat</td>
+        </tr>
+        <tr>
+            <th>Mid-Morning</th>
+            <td>
+                <time datetime="10:00">10am</time>-<time datetime="12:00">12pm</time>
+            </td>
+            <td>play</td>
+        </tr>
+        <tr>
+            <th>Afternoon</th>
+            <td>
+                <time datetime="12:00">12pm</time>-<time datetime="14:00">14pm</time>
+            </td>
+            <td>study</td>
+        </tr>
+        <tr>
+            <th rowspan="2" colspan="2">Remaining time</th>
+            <td>Free time</td>
+        </tr>
+        <tr>
+            <td>sleep</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" style = "text-align: center;">these are all my activities</td>
+        </tr>
+    </tfoot>
+    </table>
+</article>
+<hr>
+<section id="form">
+    <h2>Feedback form</h2>
+    <form action="https://httpbin.org/get" method="get">
+    <fieldset>
+        <legend>Feedback form</legend>
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" name="Name" id="name" placeholder="Name" autocomplete="on" required>
+        </p>
+        <p>
+            <label for="feedback">Feedback:</label><br>
+            <textarea name="Feedback" id="feedback" cols="20" rows="10" placeholder="write something..." required></textarea>
+        </p>
+        <p>
+            <label for="rate">Rate us</label><br>
+            <input type="number" name="Rate" id="rate" min="0" max="100" step="10" placeholder="out of 100" required>
+        </p>
+        <p>
+            <label for="lang">Known Language:</label><br>
+            <select name="lang" id="lang">
+                <option value="select" selected>Select One</option>
+                <optgroup label="oops">
+                    <option value="c++">C++</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </optgroup>
+                <optgroup label="structural">
+                    <option value="c">C</option>
+                </optgroup>
+                <optgroup label="scripting">
+                    <option value="html">HTML</option>
+                    <option value="javascript">Javascript</option>
+                </optgroup>
+                <option value="others">Others</option>
+            </select>
+        </p>
+        <!-- <p>
+            <label for="lang">Language:</label>
+            <input type="text" name="lang" id="lang" list="lang-list">
+            <datalist id="lang-list">
+                <option value="c">
+                    <option value="c++">
+                        <option value="python">
+                            <option value="java">
+                            </datalist>
+                        </p> -->
+                    </fieldset>
+                    <fieldset>
+                        <legend>Marvel</legend>
+                        <p>
+                            <input type="radio" name="marvel" id="iron" value="iron">
+                            <label for="iron">Iron Man</label>
+                            <input type="radio" name="marvel" id="cap" value="cap">
+                            <label for="cap">Captain America</label>
+                            <input type="radio" name="marvel" id="thor" value="thor">
+                            <label for="thor">Thor</label>
+                            <input type="radio" name="marvel" id="others" value="others">
+                            <label for="others">Others</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Marvel</legend>
+                        <p>
+                            <input type="checkbox" name="marvel" id="iro" value="iro">
+                            <label for="iro">Iron Man</label>
+                            <input type="checkbox" name="marvel" id="ca" value="ca">
+                            <label for="ca">Captain America</label>
+                            <input type="checkbox" name="marvel" id="tho" value="tho">
+                            <label for="tho">Thor</label>
+                            <input type="checkbox" name="marvel" id="other" value="other">
+                            <label for="other">Others</label>
+                        </p>
+                    </fieldset>
+                    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit</button>
+                    <button type="reset">Reset</button>
+                    <!-- <input type="button" value="submit" onclick="function()"> -->
+                </form>
+</section>
+</main>
+<hr>
+<footer>
+    &lt;&copy;<a href="clone.html">Ajay</a>&gt;
+
+    <p>
+        <a href="#">back to top</a>
+    </p>
+</footer>
+</body>
+</html>

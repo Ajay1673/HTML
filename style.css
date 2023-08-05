@@ -1,0 +1,147 @@
+@import url(https://fonts.google.com/specimen/Roboto);
+*{
+    /* border: 1px red solid;  */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-style: 1.5rem;
+    min-height: 200vh;
+}
+.container h1{
+    text-align: center;
+    margin: 1rem;
+}
+/*
+h1{
+    font-size: 24px;
+    color: blueviolet;
+    color: #000000;
+}
+/* element selector 
+p{
+    font:inherit;
+    color: green;
+    color: rgba(0,0,0,0.5);
+}
+h2{
+    color: rgba(0,0,0,0.7);
+}
+class selector 
+.p2{
+    color: blue;
+} 
+/* id selector ; 1st paragraph styled by overwritten using the id 
+#para1{
+    color: orange;
+}
+.inspan{
+    font-style: italic;
+    text-transform: uppercase;
+    background-color: rgba(215,180,0,0.8);
+}*/
+/* header{
+    width: 50%;
+} */
+/* body{
+    background: rgba(220,220,220,1);
+    width: 100vw;
+}
+main{
+    font-size: 2rem;
+    width: 50vw;
+    background-color: blue;
+} */
+/* .container{
+    border: 4px double green;
+    border-top: 4px dotted red; 
+    border-bottom: 3px dashed blue;
+    outline: 5px solid yellow;
+    font-size: 1.5rem;
+    padding: 1em;
+    margin:  1em;
+}
+.circle{
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    outline:2px solid black;
+    outline-offset: 0.25rem;
+    border-radius: 20px;
+    margin: 3rem auto;
+} */
+/* p{
+    font-size: 1em;  /*1rem=16px , 1em=2*1rem =32px
+    width: 40ch;
+} */
+/* .body{
+    padding: 5% 10%;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+}
+ol{
+    list-style-type: none;
+    text-align: center;
+}
+ul{
+    list-style-type: square;
+    text-align: center;
+    
+    color: blue;
+}
+ul li:nth-last-child(1){
+    color: red;
+}
+ul ::marker{
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
+    content: "steps : ";
+} */
+.inner{
+    border: 2px dashed darksalmon;
+    width:50vw;
+    height: 65vh;
+    margin: 60px auto;
+    /* position: relative; */
+}
+.outer{
+    border: 2px solid darkblue;
+    width: 75vw;
+    height:85vh;
+    margin: 70px auto;
+    position: relative;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    color:#fff;
+    padding:1rem;
+}
+.absolute{
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.relative{
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 284px;
+    left:246px;
+}
+.fixed{
+    background-color: green;
+    position: fixed;
+    top: 125px;
+    right: 80px;
+}
+.sticky{
+    background-color: yellow;
+    position: sticky;
+    top: 0px;
+}

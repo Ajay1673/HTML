@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/lhome.css" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header class="bg">
+      <h1>ABC Garments</h1>
+      <nav>
+        <ul>
+          <li><a href="/static/lhome.html">Home</a></li>
+          <li><a href="/static/index.html">Profile</a></li>
+          <li>
+            <a href="/static/home.html"><button>Log out</button></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="cards">
+        <!-- cards div -->
+        <div class="content">
+          <!-- my order div -->
+          <div id="myorder" class="orders">
+            <h2>My Orders</h2>
+            <p>
+              <em>You can see your order details and history of your orders</em>
+            </p>
+          </div>
+          <!-- End of my order div -->
+          <!-- book order div -->
+          <!-- <div id="bookord" class="orders">
+            <h2>Book Orders (Individual)</h2>
+            <p>
+              <em>You can book your orders here in your preferences</em>
+            </p>
+          </div> -->
+          <!-- End of book order div -->
+          <!-- group orders div -->
+          <div id="groupord" class="orders">
+            <h2>Book Orders</h2>
+            <p>
+              <em>You can book your orders here in huge amount</em>
+            </p>
+          </div>
+          <!-- End of group orders div -->
+        </div>
+        <!-- End of content div -->
+        <div class="products" style="display: none">
+          <div class="designs">
+            <div class="Men">
+              <h2></h2>
+              <div class="images">
+                <a href="/static/#" class="container">
+                  <img src="/static/images/coat.jpg" alt="coat" />
+                  <div class="text">
+                    <h2>Suit</h2>
+                    <span>$140</span><br />
+                    <span>4.5⭐</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="designs">
+            <div class="Men">
+              <h2></h2>
+              <div class="images">
+                <a href="/static/#" class="container">
+                  <img src="/static/images/formal.jpeg" alt="coat" />
+                  <div class="text">
+                    <h2>Formal Shirt</h2>
+                    <span>$150</span><br />
+                    <span>4.7⭐</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- my orders table div starts here -->
+        <div class="master" style="display: none">
+          <div>
+            <!--my orders card cancel button div -->
+            <button class="trashButn">X</button>
+          </div>
+          <div class="ord-head">Your Orders</div>
+          <div class="text">
+            <table></table>
+          </div>
+        </div>
+
+        <div class="grp-order" style="display: none">
+          <div class="grpord-form">
+            <div class="grpord-head">
+              <h2>Book Your Order</h2>
+              <div>
+                <button class="grp-cancel">x</button>
+              </div>
+            </div>
+            <form id="bookform" action="/grpbook" method="post" enctype="multipart/form-data">
+              <!-- <input type="hidden" name="uid" value="{{uid}}" /> -->
+              <div class="grpforminputs">
+                <label>Order Name</label>
+                <input type="text" name="oname" id="oname" required />
+              </div>
+              <div class="grpforminputs">
+                <label>Material</label>
+                <input type="file" name="file" id="file" required />
+              </div>
+
+
+              <div class="grpforminputs">
+                <label>Dress Type</label>
+                <select name="dtype" id="dtype">
+                  <option value="shirt">Shirt</option>
+                  <option value="pant">Pant</option>
+                </select>
+              </div>
+              
+              <div class="grpforminputs">
+                <label>Model Image</label>
+                <input type="file" name="modfile" required />
+              </div>
+
+              <div class="grpforminputs">
+                <label>Description</label>
+                <textarea name="desc" id="desc" cols="20" rows="10"></textarea>
+              </div>
+
+              <div class="grpforminputs">
+                <label>Color</label>
+                <input type="color" name="color" required />
+              </div>
+
+              <div class="grpforminputs">
+                <label>Dress Count</label>
+                <input type="number" name="count" id="count" required />
+              </div>
+
+              <div class="grpforminputs grpformtable">
+                <table></table>
+              </div>
+
+              <div class="grpforminputs">
+                <label>Delivery Date</label>
+                <input type="date" id="date" name="date" required />
+              </div>
+
+              <div class="grp-btns">
+                <button type="reset" class="grpbook-btn">CLEAR</button>
+                <button type="submit" class="grpbook-btn">BOOK</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/static/js/lhome.js"></script>
+  </body>
+</html>
